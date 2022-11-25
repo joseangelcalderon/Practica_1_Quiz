@@ -24,6 +24,7 @@ struct QuizzesView: View {
             }
             .listStyle(.plain)
             .navigationTitle("Quizzes")
+            .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 quizzesModel.load()
             }

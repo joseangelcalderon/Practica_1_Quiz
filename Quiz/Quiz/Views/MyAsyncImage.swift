@@ -14,7 +14,8 @@ struct MyAsyncImage: View {
     var body: some View {
         AsyncImage(url: url){ phase in
             if url == nil{
-                Color.white
+                Image("imagen_error_2")
+                    .scaledToFill()
             }else if let image = phase.image{
                 image.resizable() //Devuelve imagen descargada
             } else if phase.error != nil {

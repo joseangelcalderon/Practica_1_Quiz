@@ -83,15 +83,19 @@ struct QuizPlayView: View {
         HStack{
             
             Text("Puntos= \(scoresModel.acertadas.count)")
-                .foregroundColor(.green)
-            Text(quizItem.author?.username  ?? "Anónimo")
-                .font(.callout)
-            MyAsyncImage(url: quizItem.author?.photo?.url)
-                .scaledToFill()
-                .frame(width: 30, height: 30)
-                .clipShape(Circle())
-                .overlay(Circle().stroke(Color.gray, lineWidth: 2))
-                .shadow(radius: 15)
+                .foregroundColor(.black)
+                .fontWeight(.heavy)
+            
+                Text(quizItem.author?.username  ?? "Anónimo")
+                    .font(.footnote)
+                
+                MyAsyncImage(url: quizItem.author?.photo?.url)
+                    .scaledToFill()
+                    .frame(width: 30, height: 30)
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                    .shadow(radius: 15)
+            
         }
     }
 }
